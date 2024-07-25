@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-color: hsl(275, 100%, 97%);
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-style: normal;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.main-content {
+  /* width: 100%; */
+  /* min-height: 100vh; */
+  /* width:1000px; */
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 10px 40px;
+  border-radius: 16px;
+}
+
+.header-content {
+  display: flex;
+  gap: 20px;
+}
+
+.header-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: hsl(292, 42%, 14%);
+  /* margin-bottom: 0; */
+}
+
+.question-answer {
+  border-bottom: 1px solid #cccccc5f;
+}
+.question-answer h4{
+    cursor: pointer;
+}
+.question-answer h4:hover{
+    color:hsl(292, 83%, 47%);
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.minus {
+  display: none;
+}
+
+.icon .minus {
+  display: block;
+}
+
+.icon .plus {
+  display: none;
+}
+
+.question-answer p {
+  margin-top: 0;
+  line-height: 1.5;
+  /* width: 600px; */
+  color: hsl(292, 16%, 49%);
+  display: none;
+}
+
+.plus p {
+  display: block;
+}
+
+.mobile {
+  display: none;
+}
+.question-answer:last-child {
+  border-bottom: none;
+}
+@media screen and (max-width: 1000px) {
+  .main-content {
+    padding: 10px 20px;
+    width: 500px;
+    /* position: relative; */
+  }
+}
+@media screen and (max-width: 600px) {
+  .main-content {
+    padding: 10px 20px;
+    width: 400px;
+    /* margin:10px; */
+    /* position: relative; */
+  }
+  .header-content h1 {
+    font-size: 32px;
+    font-weight: 700;
+    /* margin-bottom: 0; */
+  }
+  .qs h4 {
+    margin-top: 10px;
+  }
+  .mobile {
+    display: block;
+    object-fit: contain;
+    object-position: 25% -50%;
+  }
+
+  .desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 310px) and (max-width: 450px) {
+  .main-content {
+    padding: 10px 20px;
+    width: 300px;
+    margin-top: 10px;
+    /* position: relative; */
+  }
+  .header-content h1 {
+    font-size: 24px;
+    font-weight: 700;
+    /* margin-bottom: 0; */
+  }
+  .qs h4 {
+    margin-top: 10px;
+  }
+  .mobile {
+    display: block;
+    object-fit: contain;
+    object-position: 25% -50%;
+  }
+
+  .desktop {
+    display: none;
+  }
+  .question h4 {
+    font-size: 14px;
+  }
+  .question-answer p {
+    font-size: 12px;
+  }
+}
